@@ -1,6 +1,6 @@
 # How-to-train-your-model
 
-If you don't know how it works, don't worry, because neither do I. But it works.
+If you don't know how it works, don't worry——because neither do I. But it works.
 
 You can consecutively try 
 
