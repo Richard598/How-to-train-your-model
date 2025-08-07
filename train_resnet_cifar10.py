@@ -45,9 +45,9 @@ if __name__ == "__main__":
     model_path = 'resnet18_cifar10.pth'
     if os.path.exists(model_path):
         net.load_state_dict(torch.load(model_path, map_location=device))
-        print(f'已加载已有模型参数：{model_path}，将继续训练...')
+        print(f'model parameters loaded：{model_path}，will keep training...')
     else:
-        print('未检测到已有模型参数，将从头开始训练...')
+        print('can\'t find model parameters，will train from zero...')
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(net.parameters(), lr=0.1, momentum=0.9, weight_decay=5e-4)
@@ -85,8 +85,8 @@ if __name__ == "__main__":
         
         if epoch % 10 == 0:
             torch.save(net.state_dict(), f'resnet18_cifar10_epoch{epoch}.pth')
-            print(f'模型已保存为 resnet18_cifar10_epoch{epoch}.pth')
+            print(f'model is saved as resnet18_cifar10_epoch{epoch}.pth')
 
-    print('训练结束！')
+    print('training is over！')
     torch.save(net.state_dict(), 'resnet18_cifar10.pth')
-    print('模型已保存为 resnet18_cifar10.pth') 
+    print('model is saved as resnet18_cifar10.pth') 
