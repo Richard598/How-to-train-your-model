@@ -1,1 +1,1 @@
-# How-to-train-your-model-for-biginners-
+# How-to-train-your-model
